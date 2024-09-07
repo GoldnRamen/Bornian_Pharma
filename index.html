@@ -1,0 +1,692 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bornian</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Odibee+Sans&family=Playwrite+CU:wght@100..400&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300..700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../src/output.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+</head>
+<body class="relative">
+    <nav id="nav" class="fixed w-full lg:relative z-[90] mb-56 lg:mb-0 bg-blue-100 flex flex-row lg:space-x-6 p-1 lg:p-7 justify-between">
+        <img class="lg:hidden size-8 mt-5" id="burgerMenu" src="./images/hamburger-menu.svg" alt="IMAGES">
+        <div id="burgerList" class="hidden fixed z-[90] top-28 left-0 p-4 bg-blue-200 lg:hidden mt-5 h-[60%] w-[60%] opacity-95">
+            <div class="flex flex-col space-x-3 font-bold text-xl font-comfortaa text-black">
+              <p class="hover:text-white text-xl my-5" id="homeSM">Home</p>
+              <p class="hover:text-white text-xl my-5" id="contactSM">Contact</p>
+              <p class="hover:text-white text-xl my-5" id="appointmentSM">Appointments</p>
+              <p class="hover:text-white text-xl my-5" id="aboutSM">About</p>
+            </div>
+          </div>
+        <div class="flex flex-row  mt-5">
+         <p class="font-semibold text-lg lg:text-3xl underline text-red-950 font-playwright">Bornian Pharma</p>
+        </div>
+        <div class="hidden lg:flex flex-row  mt-5">
+          <div class="flex flex-row space-x-3 font-bold text-xl font-comfortaa text-slate-500">
+            <p class="hover:text-white" id="home">Home</p>
+            <p>|</p>
+            <p class="hover:text-white" id="contact">Contact</p>
+            <p>|</p>
+            <p class="hover:text-white" id="appointment">Appointments</p>
+            <p>|</p>
+            <p class="hover:text-white" id="about">About</p>
+          </div>
+        </div>
+        <div class="flex flex-row space-x-3 hover:bg-teal-200 p-3">
+            <p class="hidden lg:block font-comfortaa text-lg mt-5">Consult Online</p>
+            <div class="nav_notif"><img class="size-12" src="./images/stethoscope.png" alt="Notifications" /></div>
+        </div>
+    </nav>
+    <div id="homeBody" class="flex flex-col lg:flex-row h-screen font-comfortaa">
+    <img class="lg:hidden block h-full w-full object-cover " src="https://ideogram.ai/assets/image/lossless/response/YhehtVVVTKql8g01j0JOkg" alt="IMAGES">    
+    <div class="bg-gradient-to-r from-bg-green-200 to-white w-full lg:w-[40%] px-6 pt-16 pb-32 lg:py-[100px] space-y-6">
+            <p class="text-5xl underline">Bornian Pharma.</p>
+            <p>Our mission at Bornian is to provide exceptional healthcare guidance and solutions that empower individuals and healthcare providers to achieve optimal health outcomes.</p>
+            <p>We are dedicated to delivering personalized, evidence-based medical consultation services with compassion, integrity, and professionalism. Our team of experienced medical consultants is committed to staying at the forefront of medical advancements, ensuring that our clients receive the most accurate and up-to-date advice.</p>
+            <p>We strive to make a positive impact on the health and well-being of our community through excellence in medical consulting.</p>
+    </div>
+    <img class="hidden lg:block h-full w-[60%] object-cover " src="https://ideogram.ai/assets/image/lossless/response/YhehtVVVTKql8g01j0JOkg" alt="IMAGES">
+    </div>
+    <div class="p-3 hidden relative" id="appointmentBody">
+        <div class="border-b-2 border-black lg:mt-0 mt-28">
+            <div class="w-fit h-[80px] text-center align-middle mx-auto my-3 space-x-4 flex flex-row">
+                <div class ="text-2xl px-7 bg-gray-300 text-center my-auto hover:text-white text-black font-semibold" id="consult">Consultation</div>
+                <div class ="text-2xl px-7 bg-gray-300 text-center my-auto hover:text-white text-black font-semibold" id="diagnose">Diagnosis</div>
+                <!-- <div class ="text-2xl px-7 bg-gray-300 text-center my-auto hover:text-white text-black font-semibold" id="prescribe">Prescription</div> -->
+            </div>
+        </div>
+        
+        <div id="consultBody" class="hidden lg:my-[50px]">   
+            <div id="details" class="relative flex lg:flex-row flex-col">
+                <form action="" id="consultForm" class="border border-black w-fit p-4 space-y-3 h-fit lg:mx-0 mx-auto mt-6 lg:mt-0">
+                    <p class="text-center font-semibold text-3xl mb-3">Patient Information</p>
+                    <div class="flex flex-row justify-between items-center space-x-2 text-md">
+                    <label for="">Name:</label>
+                    <input type="text" id="userName" placeholder="e.g Lastname Firstname Middlename" class="text-sm italic p-2 rounded-md border border-black w-fill">
+                    </div>
+                    <div class="flex flex-row justify-between items-center space-x-2 text-md">
+                    <label for="">Age:</label>
+                    <input type="text" id="userAge" placeholder="e.g 20" class="text-sm italic p-2 rounded-md border border-black">
+                    </div>
+                    <div class="flex flex-row justify-between items-center space-x-2 text-md">
+                    <label for="">Phone number:</label>
+                    <input type="text" id="userPhone" placeholder="e.g 09051234567" class="text-sm italic p-2 rounded-md border border-black">
+                    </div>
+                    <div class="flex flex-row items-center justify-between space-x-2 text-md">
+                    <label for="">Email:</label>
+                    <input type="email" id="userMail" placeholder="e.g abc@abcd.com" class="text-sm italic p-2 rounded-md border border-black">
+                    </div>
+                    <div class="flex flex-row justify-between items-center space-x-2 text-md">
+                    <label for="">Address:</label>
+                    <input type="text" id="userAddress" placeholder="e.g state, city/town, LGA, street, building-no." class="text-sm italic p-2 rounded-md border border-black w-fill">
+                    </div>
+                    <div class="">
+                    <label for="" class="flex flex-col">Select a gender</label>
+                    <div class="space-x-1 flex-row flex items-center"><input type="checkbox" id="maleBox"><p>Male</p></div>
+                    <div class="space-x-1 flex-row flex items-center"><input type="checkbox" id="femBox"><p>Female</p></div>
+                    <div class="space-x-1 flex-row flex items-center"><input type="checkbox" id="otherGenBox"><p>Unspecified</p></div>
+                    <label for="Gender" id="userGender" class="hidden"></label>
+                    </div>
+                    <div>
+                    <label for="">HMO name</label>
+                    <input type="text" id="userHMO" class="border border-black">
+                    </div>
+                </form>
+                
+                <form id="drAppointment" action="" class="h-fit w-full mx-auto my-20 overflow-x-scroll lg:overflow-hidden">
+                    <p class="text-center text-4xl my-4 font-bold overflow-hidden">Appointments</p>
+                    <div class="lg:w-fit lg:mx-auto p-1 w-screen">
+                        <table class="border border-black lg:overflow-hidden">
+                            <thead class="border border-black">
+                                <tr>
+                                    <th class="border border-black">Doctor</th>
+                                    <th class="border border-black">Monday</th>
+                                    <th class="border border-black">Tuesday</th>
+                                    <th class="border border-black">Wednesday</th>
+                                    <th class="border border-black">Thursday</th>
+                                    <th class="border border-black">Friday</th>
+                                    <th class="border border-black">Saturday</th>
+                                    <th class="border border-black">Sunday</th>
+                                </tr>
+                            </thead>
+                            <tbody class="border text-lg border-black space-y-7">
+                                <tr>
+                                    <td class="border border-black p-1 text-md">Dr. Samuel Stinger</td>
+                                    <td class="border border-black p-1 text-md">
+                                        <select name="Dr Samuel Stinger: Monday">
+                                            <option value="">Select a time</option>
+                                            <option value="09:00">09:00 - 11:00</option>
+                                            <option value="13:00">13:00 - 15:00</option>
+                                        </select>
+                                    </td>
+                                    <td class="border border-black p-1 text-md">
+                                        <select name="Dr Samuel Stinger: Tuesday">
+                                            <option value="">Select a time</option>
+                                            <option value="10:00">10:00 - 12:00</option>
+                                            <option value="14:00">14:00 - 16:00</option>
+                                        </select>
+                                    </td>
+                                    <td class="border border-black p-1 text-md">
+                                        <select name="Dr Samuel Stinger: Wednesday">
+                                            <option value="">Select a time</option>
+                                            <option value="08:00">08:00 - 10:00</option>
+                                            <option value="12:00">12:00 - 14:00</option>
+                                        </select>
+                                    </td>
+                                    <td class="border border-black p-1 text-md">
+                                        <select name="Dr Samuel Stinger: Thursday">
+                                            <option value="">Select a time</option>
+                                            <option value="09:00">09:00 - 11:00</option>
+                                            <option value="15:00">15:00 - 17:00</option>
+                                        </select>
+                                    </td>
+                                    <td class="border border-black p-1 text-md">
+                                        <select name="Dr Samuel Stinger: Friday">
+                                            <option value="">Select a time</option>
+                                            <option value="10:00">10:00 - 12:00</option>
+                                            <option value="13:00">13:00 - 15:00</option>
+                                        </select>
+                                    </td>
+                                    <td class="border border-black p-1 text-md">
+                                        <select name="Dr Samuel Stinger: Saturday">
+                                            <option value="">Select a time</option>
+                                            <option value="09:00">09:00 - 11:00</option>
+                                            <option value="14:00">14:00 - 16:00</option>
+                                        </select>
+                                    </td>
+                                    <td class="border border-black p-1 text-md">
+                                        <select name="Dr Samuel Stinger: Sunday">
+                                            <option value="">Select a time</option>
+                                            <option value="10:00">10:00 - 12:00</option>
+                                            <option value="12:00">12:00 - 14:00</option>
+                                        </select>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="border border-black p-1 text-md">Dr. Jackson Sawyer</td>
+                                    <td class="border border-black p-1 text-md">
+                                        <select name="Dr Jackson Sawyer: Monday">
+                                            <option value="">Select a time</option>
+                                            <option value="09:00">09:00 - 11:00</option>
+                                            <option value="13:00">13:00 - 15:00</option>
+                                        </select>
+                                    </td>
+                                    <td class="border border-black p-1 text-md">
+                                    <select name="Dr Jackson Sawyer: Tuesday">
+                                        <option value="">Select a time</option>
+                                        <option value="08:00">08:00 - 10:00</option>
+                                        <option value="12:00">12:00 - 14:00</option>
+                                    </select>
+                                    </td>
+                                    <td class="border border-black p-1 text-md">
+                                        
+                                    <select name="Dr Jackson Sawyer: Wednesday">
+                                        <option value="">Select a time</option>
+                                        <option value="10:00">10:00 - 12:00</option>
+                                        <option value="13:00">13:00 - 15:00</option>
+                                    </select>
+                                    </td>
+                                    <td class="border border-black p-1 text-md">
+                                        <select name="Dr Jackson Sawyer: Thursday">
+                                            <option value="">Select a time</option>
+                                            <option value="09:00">09:00 - 11:00</option>
+                                            <option value="15:00">15:00 - 17:00</option>
+                                        </select>
+                                    </td>
+                                    <td class="border border-black p-1 text-md">
+                                    <select name="Dr Jackson Sawyer: Friday">
+                                        <option value="">Select a time</option>
+                                        <option value="10:00">09:00 - 12:00</option>
+                                        <option value="12:00">02:00 - 05:00</option>
+                                    </select>
+                                    </td>
+                                    <td class="border border-black p-1 text-md">
+                                        <select name="Dr Jackson Sawyer: Saturday">
+                                            <option value="">Select a time</option>
+                                            <option value="09:00">09:00 - 11:00</option>
+                                            <option value="14:00">14:00 - 16:00</option>
+                                        </select>
+                                    </td>
+                                    <td class="border border-black p-1 text-md">
+                                        <select name="Dr Jackson Sawyer: Sunday">
+                                            <option value="">Select a time</option>
+                                            <option value="10:00">10:00 - 12:00</option>
+                                            <option value="12:00">12:00 - 14:00</option>
+                                        </select>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="border border-black p-1 text-md">Dr. Jennifer Freeman</td>
+                                    <td class="border border-black p-1 text-md">
+                                        <select name="Dr Jennifer Freedman: Monday">
+                                            <option value="">Select a time</option>
+                                            <option value="09:00">09:00 - 11:00</option>
+                                            <option value="13:00">13:00 - 15:00</option>
+                                        </select>
+                                    </td>
+                                    <td class="border border-black p-1 text-md">
+                                    <select name="Dr Jennifer Freedman: Tuesday">
+                                        <option value="">Select a time</option>
+                                        <option value="08:00">08:00 - 10:00</option>
+                                        <option value="12:00">12:00 - 14:00</option>
+                                    </select>
+                                    </td>
+                                    <td class="border border-black p-1 text-md">
+                                        
+                                    <select name="Dr Jennifer Freedman: Wednesday">
+                                        <option value="">Select a time</option>
+                                        <option value="10:00">10:00 - 12:00</option>
+                                        <option value="13:00">13:00 - 15:00</option>
+                                    </select>
+                                    </td>
+                                    <td class="border border-black p-1 text-md">
+                                        <select name="Dr Jennifer Freedman: Thursday">
+                                            <option value="">Select a time</option>
+                                            <option value="09:00">09:00 - 11:00</option>
+                                            <option value="15:00">15:00 - 17:00</option>
+                                        </select>
+                                    </td>
+                                    <td class="border border-black p-1 text-md">
+                                    <select name="Dr Jennifer Freedman: Friday">
+                                        <option value="">Select a time</option>
+                                        <option value="10:00">09:00 - 12:00</option>
+                                        <option value="12:00">02:00 - 05:00</option>
+                                    </select>
+                                    </td>
+                                    <td class="border border-black p-1 text-md">
+                                        <select name="Dr Jennifer Freedman: Saturday">
+                                            <option value="">Select a time</option>
+                                            <option value="09:00">09:00 - 11:00</option>
+                                            <option value="14:00">14:00 - 16:00</option>
+                                        </select>
+                                    </td>
+                                    <td class="border border-black p-1 text-md">
+                                        <select name="Dr Jennifer Freedman: Sunday">
+                                            <option value="">Select a time</option>
+                                            <option value="10:00">10:00 - 12:00</option>
+                                            <option value="12:00">12:00 - 14:00</option>
+                                        </select>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="border border-black p-1 text-md">Dr. Fatima Reeves</td>
+                                    <td class="border border-black p-1 text-md">
+                                        <select name="Dr Fatima Reeves: Monday">
+                                            <option value="">Select a time</option>
+                                            <option value="09:00">09:00 - 11:00</option>
+                                            <option value="13:00">13:00 - 15:00</option>
+                                        </select>
+                                    </td>
+                                    <td class="border border-black p-1 text-md">
+                                    <select name="Dr Fatima Reeves: Tuesday">
+                                        <option value="">Select a time</option>
+                                        <option value="08:00">08:00 - 10:00</option>
+                                        <option value="12:00">12:00 - 14:00</option>
+                                    </select>
+                                    </td>
+                                    <td class="border border-black p-1 text-md">
+                                        
+                                    <select name="Dr Fatima Reeves: Wednesday">
+                                        <option value="">Select a time</option>
+                                        <option value="10:00">10:00 - 12:00</option>
+                                        <option value="13:00">13:00 - 15:00</option>
+                                    </select>
+                                    </td>
+                                    <td class="border border-black p-1 text-md">
+                                        <select name="Dr Fatima Reeves: Thursday">
+                                            <option value="">Select a time</option>
+                                            <option value="09:00">09:00 - 11:00</option>
+                                            <option value="15:00">15:00 - 17:00</option>
+                                        </select>
+                                    </td>
+                                    <td class="border border-black p-1 text-md">
+                                    <select name="Dr Fatima Reeves: Friday">
+                                        <option value="">Select a time</option>
+                                        <option value="10:00">09:00 - 12:00</option>
+                                        <option value="12:00">02:00 - 05:00</option>
+                                    </select>
+                                    </td>
+                                    <td class="border border-black p-1 text-md">
+                                        <select name="Dr Fatima Reeves: Saturday">
+                                            <option value="">Select a time</option>
+                                            <option value="09:00">09:00 - 11:00</option>
+                                            <option value="14:00">14:00 - 16:00</option>
+                                        </select>
+                                    </td>
+                                    <td class="border border-black p-1 text-md">
+                                        <select name="Dr Fatima Reeves: Sunday">
+                                            <option value="">Select a time</option>
+                                            <option value="10:00">10:00 - 12:00</option>
+                                            <option value="12:00">12:00 - 14:00</option>
+                                        </select>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="border border-black p-1 text-md">Dr. Titus Dawkins</td>
+                                    <td class="border border-black p-1 text-md">
+                                        <select name="Dr Titus Dawkins: Monday">
+                                            <option value="">Select a time</option>
+                                            <option value="09:00">09:00 - 11:00</option>
+                                            <option value="13:00">13:00 - 15:00</option>
+                                        </select>
+                                    </td>
+                                    <td class="border border-black p-1 text-md">
+                                    <select name="Dr Titus Dawkins: Tuesday">
+                                        <option value="">Select a time</option>
+                                        <option value="08:00">08:00 - 10:00</option>
+                                        <option value="12:00">12:00 - 14:00</option>
+                                    </select>
+                                    </td>
+                                    <td class="border border-black p-1 text-md">
+                                        
+                                    <select name="Dr Titus Dawkins: Wednesday">
+                                        <option value="">Select a time</option>
+                                        <option value="10:00">10:00 - 12:00</option>
+                                        <option value="13:00">13:00 - 15:00</option>
+                                    </select>
+                                    </td>
+                                    <td class="border border-black p-1 text-md">
+                                        <select name="Dr Titus Dawkins: Thursday">
+                                            <option value="">Select a time</option>
+                                            <option value="09:00">09:00 - 11:00</option>
+                                            <option value="15:00">15:00 - 17:00</option>
+                                        </select>
+                                    </td>
+                                    <td class="border border-black p-1 text-md">
+                                    <select name="Dr Titus Dawkins: Friday">
+                                        <option value="">Select a time</option>
+                                        <option value="10:00">09:00 - 12:00</option>
+                                        <option value="12:00">02:00 - 05:00</option>
+                                    </select>
+                                    </td>
+                                    <td class="border border-black p-1 text-md">
+                                        <select name="Dr Titus Dawkins: Saturday">
+                                            <option value="">Select a time</option>
+                                            <option value="09:00">09:00 - 11:00</option>
+                                            <option value="14:00">14:00 - 16:00</option>
+                                        </select>
+                                    </td>
+                                    <td class="border border-black p-1 text-md">
+                                        <select name="Dr Titus Dawkins: Sunday">
+                                            <option value="">Select a time</option>
+                                            <option value="10:00">10:00 - 12:00</option>
+                                            <option value="12:00">12:00 - 14:00</option>
+                                        </select>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="border border-black p-1 text-md">Dr. Hauwa Samson</td>
+                                    <td class="border border-black p-1 text-md">
+                                        <select name="Dr Hauwa Samson: Monday">
+                                            <option value="">Select a time</option>
+                                            <option value="09:00">09:00 - 11:00</option>
+                                            <option value="13:00">13:00 - 15:00</option>
+                                        </select>
+                                    </td>
+                                    <td class="border border-black p-1 text-md">
+                                    <select name="Dr Hauwa Samson: Tuesday">
+                                        <option value="">Select a time</option>
+                                        <option value="08:00">08:00 - 10:00</option>
+                                        <option value="12:00">12:00 - 14:00</option>
+                                    </select>
+                                    </td>
+                                    <td class="border border-black p-1 text-md">
+                                        
+                                    <select name="Dr Hauwa Samson: Wednesday">
+                                        <option value="">Select a time</option>
+                                        <option value="10:00">10:00 - 12:00</option>
+                                        <option value="13:00">13:00 - 15:00</option>
+                                    </select>
+                                    </td>
+                                    <td class="border border-black p-1 text-md">
+                                        <select name="Dr Hauwa Samson: Thursday">
+                                            <option value="">Select a time</option>
+                                            <option value="09:00">09:00 - 11:00</option>
+                                            <option value="15:00">15:00 - 17:00</option>
+                                        </select>
+                                    </td>
+                                    <td class="border border-black p-1 text-md">
+                                    <select name="Dr Hauwa Samson: Friday">
+                                        <option value="">Select a time</option>
+                                        <option value="10:00">09:00 - 12:00</option>
+                                        <option value="12:00">02:00 - 05:00</option>
+                                    </select>
+                                    </td>
+                                    <td class="border border-black p-1 text-md">
+                                        <select name="Dr Hauwa Samson: Saturday">
+                                            <option value="">Select a time</option>
+                                            <option value="09:00">09:00 - 11:00</option>
+                                            <option value="14:00">14:00 - 16:00</option>
+                                        </select>
+                                    </td>
+                                    <td class="border border-black p-1 text-md">
+                                        <select name="Dr Hauwa Samson: Sunday">
+                                            <option value="">Select a time</option>
+                                            <option value="10:00">10:00 - 12:00</option>
+                                            <option value="12:00">12:00 - 14:00</option>
+                                        </select>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="border border-black p-1 text-md">Dr. Ayo Trelawney</td>
+                                    <td class="border border-black p-1 text-md">
+                                        <select name="Dr Ayo Trelawney: Monday">
+                                            <option value="">Select a time</option>
+                                            <option value="09:00">09:00 - 11:00</option>
+                                            <option value="13:00">13:00 - 15:00</option>
+                                        </select>
+                                    </td>
+                                    <td class="border border-black p-1 text-md">
+                                    <select name="Dr Ayo Trelawney: Tuesday">
+                                        <option value="">Select a time</option>
+                                        <option value="08:00">08:00 - 10:00</option>
+                                        <option value="12:00">12:00 - 14:00</option>
+                                    </select>
+                                    </td>
+                                    <td class="border border-black p-1 text-md">
+                                        
+                                    <select name="Dr Ayo Trelawney: Wednesday">
+                                        <option value="">Select a time</option>
+                                        <option value="10:00">10:00 - 12:00</option>
+                                        <option value="13:00">13:00 - 15:00</option>
+                                    </select>
+                                    </td>
+                                    <td class="border border-black p-1 text-md">
+                                        <select name="Dr Ayo Trelawney: Thursday">
+                                            <option value="">Select a time</option>
+                                            <option value="09:00">09:00 - 11:00</option>
+                                            <option value="15:00">15:00 - 17:00</option>
+                                        </select>
+                                    </td>
+                                    <td class="border border-black p-1 text-md">
+                                    <select name="Dr Ayo Trelawney: Friday">
+                                        <option value="">Select a time</option>
+                                        <option value="10:00">09:00 - 12:00</option>
+                                        <option value="12:00">02:00 - 05:00</option>
+                                    </select>
+                                    </td>
+                                    <td class="border border-black p-1 text-md">
+                                        <select name="Dr Ayo Trelawney: Saturday">
+                                            <option value="">Select a time</option>
+                                            <option value="09:00">09:00 - 11:00</option>
+                                            <option value="14:00">14:00 - 16:00</option>
+                                        </select>
+                                    </td>
+                                    <td class="border border-black p-1 text-md">
+                                        <select name="Dr Ayo Trelawney: Sunday">
+                                            <option value="">Select a time</option>
+                                            <option value="10:00">10:00 - 12:00</option>
+                                            <option value="12:00">12:00 - 14:00</option>
+                                        </select>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="border border-black p-1 text-md">Dr. Chuka Stevenson</td>
+                                    <td class="border border-black p-1 text-md">
+                                        <select name="Dr Chuka Stevenson: Monday">
+                                            <option value="">Select a time</option>
+                                            <option value="09:00">09:00 - 11:00</option>
+                                            <option value="13:00">13:00 - 15:00</option>
+                                        </select>
+                                    </td>
+                                    <td class="border border-black p-1 text-md">
+                                    <select name="Dr Chuka Stevenson: Tuesday">
+                                        <option value="">Select a time</option>
+                                        <option value="08:00">08:00 - 10:00</option>
+                                        <option value="12:00">12:00 - 14:00</option>
+                                    </select>
+                                    </td>
+                                    <td class="border border-black p-1 text-md">
+                                        
+                                    <select name="Dr Chuka Stevenson: Wednesday">
+                                        <option value="">Select a time</option>
+                                        <option value="10:00">10:00 - 12:00</option>
+                                        <option value="13:00">13:00 - 15:00</option>
+                                    </select>
+                                    </td>
+                                    <td class="border border-black p-1 text-md">
+                                        <select name="Dr Chuka Stevenson: Thursday">
+                                            <option value="">Select a time</option>
+                                            <option value="09:00">09:00 - 11:00</option>
+                                            <option value="15:00">15:00 - 17:00</option>
+                                        </select>
+                                    </td>
+                                    <td class="border border-black p-1 text-md">
+                                    <select name="Dr Chuka Stevenson: Friday">
+                                        <option value="">Select a time</option>
+                                        <option value="10:00">09:00 - 12:00</option>
+                                        <option value="12:00">02:00 - 05:00</option>
+                                    </select>
+                                    </td>
+                                    <td class="border border-black p-1 text-md">
+                                        <select name="Dr Chuka Stevenson: Saturday">
+                                            <option value="">Select a time</option>
+                                            <option value="09:00">09:00 - 11:00</option>
+                                            <option value="14:00">14:00 - 16:00</option>
+                                        </select>
+                                    </td>
+                                    <td class="border border-black p-1 text-md">
+                                        <select name="Dr Chuka Stevenson: Sunday">
+                                            <option value="">Select a time</option>
+                                            <option value="10:00">10:00 - 12:00</option>
+                                            <option value="12:00">12:00 - 14:00</option>
+                                        </select>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="border border-black p-1 text-md">Dr. Dami Stoakes</td>
+                                    <td class="border border-black p-1 text-md">
+                                        <select name="Dr Dami Stoakes: Monday">
+                                            <option value="">Select a time</option>
+                                            <option value="09:00">09:00 - 11:00</option>
+                                            <option value="13:00">13:00 - 15:00</option>
+                                        </select>
+                                    </td>
+                                    <td class="border border-black p-1 text-md">
+                                    <select name="Dr Dami Stoakes: Tuesday">
+                                        <option value="">Select a time</option>
+                                        <option value="08:00">08:00 - 10:00</option>
+                                        <option value="12:00">12:00 - 14:00</option>
+                                    </select>
+                                    </td>
+                                    <td class="border border-black p-1 text-md">
+                                        
+                                    <select name="Dr Dami Stoakes: Wednesday">
+                                        <option value="">Select a time</option>
+                                        <option value="10:00">10:00 - 12:00</option>
+                                        <option value="13:00">13:00 - 15:00</option>
+                                    </select>
+                                    </td>
+                                    <td class="border border-black p-1 text-md">
+                                        <select name="Dr Dami Stoakes: Thurssday">
+                                            <option value="">Select a time</option>
+                                            <option value="09:00">09:00 - 11:00</option>
+                                            <option value="15:00">15:00 - 17:00</option>
+                                        </select>
+                                    </td>
+                                    <td class="border border-black p-1 text-md">
+                                    <select name="Dr Dami Stoakes: Friday">
+                                        <option value="">Select a time</option>
+                                        <option value="10:00">09:00 - 12:00</option>
+                                        <option value="12:00">02:00 - 05:00</option>
+                                    </select>
+                                    </td>
+                                    <td class="border border-black p-1 text-md">
+                                        <select name="Dr Dami Stoakes: Saturday">
+                                            <option value="">Select a time</option>
+                                            <option value="10:00">10:00 - 12:00</option>
+                                            <option value="12:00">12:00 - 14:00</option>
+                                        </select>
+                                    </td>
+                                    <td class="border border-black p-1 text-md">
+                                        <select name="Dr Dami Stoakes: Sunday">
+                                            <option value="">Select a time</option>
+                                            <option value="09:00">09:00 - 11:00</option>
+                                            <option value="14:00">14:00 - 16:00</option>
+                                        </select>
+                                    </td> 
+                                </tr>
+                                <tr>
+                                    <td class="border border-black p-1 text-md">Dr. Rasheed Lincoln</td>
+                                    <td class="border border-black p-1 text-md">
+                                        <select name="Dr Rasheed Lincoln: Monday">
+                                            <option value="">Select a time</option>
+                                            <option value="09:00">09:00 - 11:00</option>
+                                            <option value="13:00">13:00 - 15:00</option>
+                                        </select>
+                                    </td>
+                                    <td class="border border-black p-1 text-md">
+                                    <select name="Dr Rasheed Lincoln: Tuesday">
+                                        <option value="">Select a time</option>
+                                        <option value="08:00">08:00 - 10:00</option>
+                                        <option value="12:00">12:00 - 14:00</option>
+                                    </select>
+                                    </td>
+                                    <td class="border border-black p-1 text-md">
+                                        
+                                    <select name="Dr Rasheed Lincoln: Wednesday">
+                                        <option value="">Select a time</option>
+                                        <option value="10:00">10:00 - 12:00</option>
+                                        <option value="13:00">13:00 - 15:00</option>
+                                    </select>
+                                    </td>
+                                    <td class="border border-black p-1 text-md">
+                                        <select name="Dr Rasheed Lincoln: Thursday">
+                                            <option value="">Select a time</option>
+                                            <option value="09:00">09:00 - 11:00</option>
+                                            <option value="15:00">15:00 - 17:00</option>
+                                        </select>
+                                    </td>
+                                    <td class="border border-black p-1 text-md">
+                                    <select name="Dr Rasheed Lincoln: Friday">
+                                        <option value="">Select a time</option>
+                                        <option value="10:00">09:00 - 12:00</option>
+                                        <option value="12:00">02:00 - 05:00</option>
+                                    </select>
+                                    </td>
+                                    <td class="border border-black p-1 text-md">
+                                        <select name="Dr Rasheed Lincoln: Saturday">
+                                            <option value="">Select a time</option>
+                                            <option value="09:00">09:00 - 11:00</option>
+                                            <option value="14:00">14:00 - 16:00</option>
+                                        </select>
+                                    </td>
+                                    <td class="border border-black p-1 text-md">
+                                        <select name="Dr Rasheed Lincoln: Sunday">
+                                            <option value="">Select a time</option>
+                                            <option value="10:00">10:00 - 12:00</option>
+                                            <option value="12:00">12:00 - 14:00</option>
+                                        </select>
+                                    </td>
+                                </tr>
+    
+                            </tbody>
+                        </table>      
+                    </div>                    
+                </form>
+            </div>
+        <button id="submit" class="border border-black hover:bg-blue-800 text-black hover:text-white text-lg font-semibold p-4 rounded-lg w-fit h-fit mx-auto">Submit</button>
+        <button id="showReceipt" class="hidden border border-black hover:bg-green-500 text-black hover:text-white text-lg font-semibold p-4 rounded-lg mt-4">Show Receipt</button>
+        <div id="receipt" class="hidden mt-8 mx-auto w-fit border-2 text-white border-white py-8 px-4 space-y-4 bg-blue-400"></div>    
+        </div>
+        <div id="diagnoseBody" class="hidden lg:my-[50px] flex-col">
+            <p>Select your symptoms:</p>
+            <form id="diagnoseForm" class="flex lg:justify-between lg:mx-auto lg:w-[80%] flex-col lg:space-x-8 lg:flex-row">
+                <div id="symptoms" class="mt-5 w-fit lg:w-[50%] h-fit p-4 border bg-blue-400 rounded-lg flex flex-wrap justify-between space-y-3">
+                    <label class="flex p-4 lg:text-xl  lg:basis-[40%] basis-[50%] text-lg"><input type="checkbox" class="mr-2 size-[25px]" id=""> Fever</label><br>
+                    <label class="flex p-4 lg:text-xl  lg:basis-[40%] basis-[50%] text-lg"><input type="checkbox" class="mr-2 size-[25px]" id=""> Cough</label><br>
+                    <label class="flex p-4 lg:text-xl  lg:basis-[40%] basis-[50%] text-lg"><input type="checkbox" class="mr-2 size-[25px]" id=""> Fatigue</label><br>
+                    <label class="flex p-4 lg:text-xl  lg:basis-[40%] basis-[50%] text-lg"><input type="checkbox" class="mr-2 size-[25px]" id=""> Vomiting</label><br>
+                    <label class="flex p-4 lg:text-xl  lg:basis-[40%] basis-[50%] text-lg"><input type="checkbox" class="mr-2 size-[25px]" id=""> Diarrhea</label><br>
+                    <label class="flex p-4 lg:text-xl  lg:basis-[40%] basis-[50%] text-lg"><input type="checkbox" class="mr-2 size-[25px]" id=""> Abdominal Pain</label><br>
+                    <label class="flex p-4 lg:text-xl  lg:basis-[40%] basis-[50%] text-lg"><input type="checkbox" class="mr-2 size-[25px]" id=""> Headache</label><br>
+                    <label class="flex p-4 lg:text-xl  lg:basis-[40%] basis-[50%] text-lg"><input type="checkbox" class="mr-2 size-[25px]" id=""> Rash</label><br>
+                </div>
+                <div class="flex flex-col">
+                    <button type="submit" id="diagnoseBtn" class="border border-black p-4 rounded-md bg-red mt-3 hover:text-white hover:bg-green-400">Check Ailment</button>
+                    <div id="ailment-info" class="hidden flex-col mt-8">
+                        <h2 id="ailment-name" class="text-lg font-semibold space-y-5"></h2>
+                        <img id="ailment-image" class="lg:w-[200px] w-[100px]" src="" alt="Ailment Image"/>
+                        <div class="text-lg">
+                            <p id="ailment-symptoms"></p>
+                            <p id="ailment-prescription"></p>
+                        </div>
+                    </div>
+                </div>
+            </form>
+        </div>
+        
+    </div>
+    <footer id="footer" class="fixed bottom-0 w-full h-[60px] bg-blue-400 text-center">
+    <p class="mx-auto h-fit w-fit mt-5">&copy;The Bald Baron 2024</p>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>
